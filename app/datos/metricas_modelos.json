@@ -1,0 +1,128 @@
+{
+  "valor_conversion_supuesto": 100.0,
+  "features_categoricas": [
+    "campaign_id",
+    "age",
+    "gender",
+    "interest1",
+    "interest2",
+    "interest3"
+  ],
+  "features_numericas": [
+    "impressions",
+    "clicks",
+    "spent",
+    "ctr",
+    "cpc",
+    "cpm"
+  ],
+  "clasificacion": [
+    {
+      "modelo": "Random Forest",
+      "accuracy": 0.6126,
+      "precision": 0.6154,
+      "recall": 0.4494,
+      "f1": 0.5195,
+      "roc_auc": 0.6294
+    },
+    {
+      "modelo": "AdaBoost",
+      "accuracy": 0.6073,
+      "precision": 0.625,
+      "recall": 0.3933,
+      "f1": 0.4828,
+      "roc_auc": 0.6011
+    }
+  ],
+  "modelo_seleccionado": "Random Forest",
+  "regresion": [
+    {
+      "modelo": "RF Regressor",
+      "MAE": 0.6463,
+      "R2": 0.4901
+    },
+    {
+      "modelo": "AdaBoost Regressor",
+      "MAE": 0.6817,
+      "R2": 0.3961
+    }
+  ],
+  "regresor_seleccionado": "RF Regressor",
+  "importancia_permutacion": {
+    "Random Forest": {
+      "ctr": -0.0089,
+      "age": -0.0069,
+      "clicks": -0.0057,
+      "interest3": -0.0052,
+      "cpm": -0.005,
+      "campaign_id": -0.0014,
+      "impressions": 0.0006,
+      "gender": 0.0012,
+      "spent": 0.0017,
+      "cpc": 0.0027,
+      "interest1": 0.006,
+      "interest2": 0.0161
+    },
+    "AdaBoost": {
+      "interest3": -0.0268,
+      "ctr": -0.0051,
+      "clicks": -0.0026,
+      "age": 0.0,
+      "spent": 0.0,
+      "cpm": 0.0,
+      "gender": 0.0,
+      "interest2": 0.0001,
+      "cpc": 0.0027,
+      "interest1": 0.0034,
+      "campaign_id": 0.0182,
+      "impressions": 0.0578
+    }
+  },
+  "roi_sin_modelo": 2.2527,
+  "top_porcentaje_optimo": 100,
+  "umbral_optimo": 0.2341,
+  "roi_con_modelo": 2.2527,
+  "presupuesto_ejemplo": 4900.0,
+  "recomendacion_ejemplo": {
+    "presupuesto": 4900.0,
+    "invertido": 4900.0,
+    "sin_invertir": 0.0,
+    "conversiones_esperadas": 350.4238884242954,
+    "ingreso_esperado": 35042.38884242954,
+    "roi_esperado": 6.151507927026436
+  },
+  "comparacion_estrategias": {
+    "Igual por segmento": {
+      "presupuesto": 4900.0,
+      "invertido": 4900.0,
+      "sin_invertir": 0.0,
+      "conversiones_esperadas": 243.8766,
+      "ingreso_esperado": 24387.6604,
+      "roi_esperado": 3.9771
+    },
+    "Proporcional al histórico": {
+      "presupuesto": 4900.0,
+      "invertido": 4900.0,
+      "sin_invertir": 0.0,
+      "conversiones_esperadas": 308.5226,
+      "ingreso_esperado": 30852.2592,
+      "roi_esperado": 5.2964
+    },
+    "Modelo (invertir todo)": {
+      "presupuesto": 4900.0,
+      "invertido": 4900.0,
+      "sin_invertir": 0.0,
+      "conversiones_esperadas": 350.4239,
+      "ingreso_esperado": 35042.3888,
+      "roi_esperado": 6.1515
+    },
+    "Modelo (solo rentable)": {
+      "presupuesto": 4900.0,
+      "invertido": 4900.0,
+      "sin_invertir": 0.0,
+      "conversiones_esperadas": 350.4239,
+      "ingreso_esperado": 35042.3888,
+      "roi_esperado": 6.1515
+    }
+  }
+}
