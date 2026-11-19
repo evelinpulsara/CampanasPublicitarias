@@ -31,7 +31,7 @@
       "precision": 0.625,
       "recall": 0.3933,
       "f1": 0.4828,
-      "roc_auc": 0.6011
+      "roc_auc": 0.6069
     }
   ],
   "modelo_seleccionado": "Random Forest",

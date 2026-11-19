@@ -3,11 +3,11 @@ import streamlit as st
 st.set_page_config(page_title="Optimización de Campañas Publicitarias", page_icon="📈", layout="wide")
 
 from datos_app import DIR_DATOS, archivos_faltantes
+from estilo import aplicar_estilo, encabezado, pie
 from pestanas import kpis, prediccion, recomendacion, resultados
 
-st.title("📈 Optimización de Campañas Publicitarias")
-st.caption("Facebook Ads Campaign Dataset · Random Forest y AdaBoost · Recomendación de inversión · "
-           "A/B testing · Atribución")
+aplicar_estilo()
+encabezado()
 
 faltantes = archivos_faltantes()
 if faltantes:
@@ -37,3 +37,5 @@ with tab3:
     recomendacion.render()
 with tab4:
     resultados.render()
+
+pie()

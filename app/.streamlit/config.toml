@@ -1,5 +1,13 @@
 [theme]
-primaryColor = "#5B6CFF"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F3F4FB"
-textColor = "#1F2333"
+base = "light"
+primaryColor = "#4F5BEF"
+backgroundColor = "#F5F6FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1B1F33"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+headingFont = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+baseRadius = "10px"
+borderColor = "#E6E8F2"
+
+[client]
+toolbarMode = "viewer"
